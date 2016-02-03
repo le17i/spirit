@@ -1,0 +1,64 @@
+<main class="page-container post" role="main">
+  <header="page-container__header">
+    <h1 class="page-container__header--title">{{title}}</h1>
+
+    <section class="page-container__header--meta"></section>
+  </header>
+
+  <article class="page-container__content post-content">
+    {{content}}
+  </article>
+
+  <footer class="page-container__footer">
+    {{#author}}
+      <section class="post-author">
+
+        {{#if image}}
+          <figure class="post-author-avatar">
+            <img src="{{image}}" alt="{{name}}" />
+          </figure>
+        {{/if}}
+
+        <article class="post-author-bio">
+          <h4 class="post-author-name"><a href="{{url}}">{{name}}</a></h4>
+          {{#if bio}}
+            <p class="post-author-about">{{{bio}}}</p>
+          {{/if}}
+  				{{#if location}}
+  					<span class="post-author-location"><i class="ic ic-location"></i> {{location}}</span>
+  				{{/if}}
+  				{{#if website}}
+  					<span class="post-author-website"><a href="{{website}}"><i class="ic ic-link"></i> Website</a></span>
+  				{{/if}}
+  			</article>
+
+      </section>
+    {{/author}}
+
+    <aside class="post-comments">
+      <a id="show-disqus" class="post-comments-activate">Show Comments</a>
+      <div id="disqus_thread"></div>
+    </aside>
+  </footer>
+
+  <aside class="page-container__sidebar post-related">
+    {{#prev_post}}
+      <a class="post-nav-prev" href="{{url}}">
+        <section class="post-nav-teaser">
+          <i class="ic ic-arrow-right"></i>
+          <h2 class="post-nav-title">{{title}}</h2>
+          <p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+        </section>
+      </a>
+    {{/prev_post}}
+    {{#next_post}}
+			<a class="post-nav-next" href="{{url}}">
+				<section class="post-nav-teaser">
+					<i class="ic ic-arrow-left"></i>
+					<h2 class="post-nav-title">{{title}}</h2>
+					<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+				</section>
+			</a>
+		{{/next_post}}
+  </aside>
+</main>
