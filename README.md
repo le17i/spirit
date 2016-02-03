@@ -1,2 +1,2 @@
-# spirit
+# Spirit
 A Ghost Theme
