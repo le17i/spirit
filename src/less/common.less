@@ -1,7 +1,20 @@
+@link_color: #0096ba;
+@title_color: rgba(0, 0, 0, 0.87);
+@text_color: rgba(0, 0, 0, 0.87);
+
+
 body {
   font-family: 'Slabo 27px', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: @title_color;
   font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+  color: @link_color;
+  img {
+    border: none;
+  }
 }

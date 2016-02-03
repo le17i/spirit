@@ -4,16 +4,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     less: {
-      options: {
-        compress: true,
-        paths: ["assets/css"],
-        plugins: [
-          new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
-          new (require('less-plugin-clean-css'))(cleanCssOptions)
-        ]
-      },
-      files: {
-        "assets/css/screen.css": "src/less/screen.less"
+      dist: {
+        options: {
+          compress: true,
+          paths: ["assets/css"],
+          plugins: [
+            new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
+            new (require('less-plugin-clean-css'))()
+          ]
+        },
+        files: {
+          "assets/css/screen.css": "src/less/screen.less"
+        }
       }
     },
     uglify: {
@@ -26,12 +28,12 @@ module.exports = function(grunt) {
     },
     watch: {
       less:{
-        files: ['styles/**/*.scss'],
-        tasks: ['sass:debug']
+        files: ['src/less/**/*.less'],
+        tasks: ['less']
       },
       uglify: {
-        files: ['app/**/*.js', 'app-login/**/*.js', 'build/**/*.js'],
-        tasks: ['jshint', 'concat', 'karma:debug']
+        files: ['src/js/**/*.js'],
+        tasks: ['uglify']
       }
     }
   });
