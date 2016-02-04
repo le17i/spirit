@@ -15,11 +15,19 @@
   <body>
 
     <section class="page">
-      {{> header}}
+      <header class="page-header">
+        <a href="{{@blog.url}}" class="page-header-logo">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        </a>
+      </header>
 
       {{{body}}}
 
-      {{> footer}}
+      <footer class="page-footer">
+        <section class="copyright">
+          <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+        </section>
+      </footer>
     </section>
 
     {{! Intro. Shows before assets loads. }}
