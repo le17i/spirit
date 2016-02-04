@@ -14,8 +14,7 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          "assets/css/screen.css": "src/less/screen.less",
-          "assets/css/intro.css": "src/less/intro.less"
+          "assets/css/screen.css": "src/less/screen.less"
         }
       }
     },
@@ -47,5 +46,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['less', 'uglify', 'watch']);
+  grunt.registerTask('build', ['less', 'uglify']);
 
 };
