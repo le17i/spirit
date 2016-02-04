@@ -1,6 +1,8 @@
 .page {
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 720px;
+  padding: 0 16px;
   width: 100%;
 
   &-header {
@@ -14,11 +16,16 @@
         font-size: 2.2rem;
       }
     }
+
+    &__footer {
+      border-top: 1px solid #DDD;
+      padding: 2rem 0;
+    }
   }
 
   &-footer {
     font-size: 0.75rem;
-    padding: 48px 0;
+    padding: 3rem 0;
     text-align: center;
   }
 }
