@@ -1,20 +1,63 @@
 @link_color: #0096ba;
-@title_color: rgba(0, 0, 0, 0.87);
+@link_color_hover: #00728f;
 @text_color: rgba(0, 0, 0, 0.87);
 
-
-body {
-  font-family: 'Slabo 27px', serif;
+.transition {
+  transition: all 0.25s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: @title_color;
-  font-family: 'Fjalla One', sans-serif;
+body {
+  color: @text_color;
+  font-family: 'Slabo 27px', serif;
 }
 
 a {
   color: @link_color;
+  text-decoration: none;
+
+  .transition();
+
+  &:hover {
+    color: @link_color_hover;
+    text-decoration: underline;
+  }
+
   img {
     border: none;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4.4rem;
+}
+
+h3 {
+  font-size: 3.8rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 28px;
+  margin-bottom: 24px;
 }

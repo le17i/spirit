@@ -23,15 +23,15 @@
 
 	{{#if prev}}
 		<a class="pagination-prev" href="{{page_url next}}">
-			<span class="pagination-label">Older Posts</span> <i class="ic ic-arrow-right"></i>
+			<i class="ic ic-arrow-left"></i> <span class="pagination-label">Anterior</span>
 		</a>
 	{{/if}}
 
-	<span class="pagination-info">Page {{page}} of {{pages}}</span>
+	<span class="pagination-info">Página {{page}} de {{pages}}</span>
 
 	{{#if next}}
 		<a class="pagination-next" href="{{page_url prev}}">
-			<i class="ic ic-arrow-left"></i> <span class="pagination-label">Newer Posts</span>
+			<span class="pagination-label">Próxima</span> <i class="ic ic-arrow-right"></i>
 		</a>
 	{{/if}}
 
