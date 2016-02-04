@@ -8,7 +8,9 @@
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/intro.css"}}" />
+    {{! Assets }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px' rel='stylesheet' type='text/css'>
 
     {{ghost_head}}
   </head>
@@ -29,14 +31,6 @@
         </section>
       </footer>
     </section>
-
-    {{! Intro. Shows before assets loads. }}
-    <div class="intro"></div>
-
-    {{! Assets }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
     {{ghost_foot}}
   </body>
