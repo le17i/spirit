@@ -1,4 +1,8 @@
-<main class="page-container post" role="main">
+{{!< default}}
+
+{{#post}}
+
+<main class="page-container post {{post_class}}" role="main">
   <header="page-container__header">
     <h1 class="page-container__header--title">{{title}}</h1>
 
@@ -22,7 +26,7 @@
         <article class="post-author-bio">
           <span class="post-author-name"><a href="{{url}}">{{name}}</a></span>
           {{#if bio}}
-            <p class="post-author-about">{{{bio}}}</p> 
+            <p class="post-author-about">{{{bio}}}</p>
           {{/if}}
   				{{#if location}}
   					<span class="post-author-location"><i class="ic ic-location"></i> {{location}}</span>
@@ -62,3 +66,5 @@
 		{{/next_post}}
   </aside>
 </main>
+
+{{/post}}
