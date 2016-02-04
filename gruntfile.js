@@ -14,16 +14,19 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          "assets/css/screen.css": "src/less/screen.less"
+          "assets/css/screen.css": "src/less/screen.less",
+          "assets/css/intro.css": "src/less/intro.less"
         }
       }
     },
     uglify: {
-      options: {
-        sourceMap: true
-      },
-      files: {
-        'assets/js/index.js': 'src/js/index.js'
+      dist: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          'assets/js/index.js': 'src/js/index.js'
+        }
       }
     },
     watch: {
