@@ -28,20 +28,29 @@
           {{#if bio}}
             <p class="post-author-about">{{{bio}}}</p>
           {{/if}}
-  				{{#if location}}
-  					<span class="post-author-location"><i class="ic ic-location"></i> {{location}}</span>
-  				{{/if}}
-  				{{#if website}}
-  					<span class="post-author-website"><a href="{{website}}"><i class="ic ic-link"></i> Website</a></span>
-  				{{/if}}
   			</article>
 
       </section>
     {{/author}}
 
     <aside class="post-comments">
-      <a id="show-disqus" class="post-comments-activate">Show Comments</a>
       <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+        this.page.url = {{url}}; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = {{post.id}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//leandrodiasnet.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </aside>
   </footer>
 

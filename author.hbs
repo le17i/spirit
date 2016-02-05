@@ -3,7 +3,7 @@
 <main class="page-container loop author" role="main">
 
   {{#author}}
-  <header="page-container__header">
+  <header="page-container__header center">
 
     {{#if image}}
 			<figure class="author-avatar">
@@ -19,20 +19,6 @@
           {{{bio}}}
         </p>
       {{/if}}
-
-      <div class="author-bio-info">
-        {{#if location}}
-          <span class="author-bio-info__location"><i class="ic ic-location"></i> {{location}}</span>
-        {{/if}}
-
-        {{#if website}}
-          <span class="author-bio-info__website"><a href="{{website}}"><i class="ic ic-link"></i> Website</a></span>
-        {{/if}}
-
-        <span class="author-bio-info__stats">
-          <i class="ic ic-posts"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
-        </span>
-      </div>
     </div>
   </header>
   {{/author}}
