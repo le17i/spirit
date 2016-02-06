@@ -14,23 +14,20 @@
 
     {{ghost_head}}
   </head>
-  <body class="{{body_class}}">
+  <body class="page {{body_class}}">
+    <header class="page-header">
+      <a href="{{@blog.url}}" class="page-header-logo">
+        <img class="page-header-brand" src="{{@blog.logo}}" alt="{{@blog.title}}" role="logo" />
+      </a>
+    </header>
 
-    <section class="page">
-      <header class="page-header">
-        <a href="{{@blog.url}}" class="page-header-logo">
-          <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
-        </a>
-      </header>
+    {{{body}}}
 
-      {{{body}}}
-
-      <footer class="page-footer">
-        <section class="copyright">
-          <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
-        </section>
-      </footer>
-    </section>
+    <footer class="page-footer">
+      <section class="copyright">
+        <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+      </section>
+    </footer>
 
     {{ghost_foot}}
 
