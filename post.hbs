@@ -6,8 +6,10 @@
   <header class="page-container__header center" itemprop="headline">
     <h1 class="page-container__header--title" itemprop="name">{{title}}</h1>
     <section class="page-container__header--meta">
-      <time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMMM YYYY"}}</time> by <span>{{author}}</span> {{tags prefix=" on " separator=", "}}
+      <time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date published_at timeago="true"}}</time> by <span>{{author}}</span> {{tags prefix=" on " separator=", "}}
+      <meta itemprop="dateModified" content="{{date updated_at format='YYYY-MM-DD'}}">
       <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
+      <meta itemprop="image" content="{{@blog.logo}}">
     </section>
   </header>
 
@@ -16,6 +18,17 @@
   </article>
 
   <footer class="page-container__footer">
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="{{@blog.logo}}">
+        <meta itemprop="width" content="320">
+        <meta itemprop="height" content="160">
+      </a>
+      <meta itemprop="name" content="{{@blog.title}}">
+      <meta itemprop="url" content="{{@blog.url}}">
+      <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
+    </div>
+
     {{#author}}
       <section class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
 
