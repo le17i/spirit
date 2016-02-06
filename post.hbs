@@ -6,7 +6,8 @@
   <header class="page-container__header center" itemprop="headline">
     <h1 class="page-container__header--title" itemprop="name">{{title}}</h1>
     <section class="page-container__header--meta">
-      <time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMMM YYYY"}}</time> by <span itemprop="publisher">{{author}}</span> {{tags prefix=" on " separator=", "}}
+      <time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMMM YYYY"}}</time> by <span>{{author}}</span> {{tags prefix=" on " separator=", "}}
+      <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
     </section>
   </header>
 
