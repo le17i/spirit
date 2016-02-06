@@ -1,18 +1,18 @@
-{{!< default}}
+{{!< nobrandtemplate}}
 
-<main class="page-container loop author" role="main">
+<main class="page-container loop author" role="main" itemtype="http://schema.org/Person">
 
   {{#author}}
   <header="page-container__header center">
 
     {{#if image}}
 			<figure class="author-avatar">
-				<img src="{{image}}" alt="{{name}}" />
+				<img src="{{image}}" alt="{{name}}" itemprop="image" />
 			</figure>
 		{{/if}}
 
     <div class="author-bio">
-      <h1 class="page-container__header--title">{{name}}</h1>
+      <h1 class="page-container__header--title" itemprop="name">{{name}}</h1>
 
       {{#if bio}}
         <p class="author-bio__about">

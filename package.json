@@ -2,7 +2,11 @@
   "name": "Spirit",
   "version": "1.0.0",
   "description": "Spirit ghost theme.",
-  "author": "",
+  "author": "Leandro Dias <me@leandrodias.net>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/le17i/spirit.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -2,29 +2,29 @@
 
 {{#post}}
 
-<main class="page-container post {{post_class}}" role="main">
+<main class="page-container post {{post_class}}" role="main" itemscope itemtype="http://schema.org/Article">
   <header="page-container__header">
-    <h1 class="page-container__header--title">{{title}}</h1>
+    <h1 class="page-container__header--title" itemprop="name">{{title}}</h1>
 
     <section class="page-container__header--meta"></section>
   </header>
 
-  <article class="page-container__content post-content">
+  <article class="page-container__content post-content" itemprop="articleBody">
     {{content}}
   </article>
 
   <footer class="page-container__footer">
     {{#author}}
-      <section class="post-author">
+      <section class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
 
         {{#if image}}
           <figure class="post-author-avatar">
-            <img src="{{image}}" alt="{{name}}" />
+            <img src="{{image}}" alt="{{name}}" itemprop="image" />
           </figure>
         {{/if}}
 
         <article class="post-author-bio">
-          <span class="post-author-name"><a href="{{url}}">{{name}}</a></span>
+          <span class="post-author-name"><a href="{{url}}" itemprop="name">{{name}}</a></span>
           {{#if bio}}
             <p class="post-author-about">{{{bio}}}</p>
           {{/if}}
@@ -76,4 +76,5 @@
   </aside>
 </main>
 
+<script id="dsq-count-scr" src="//leandrodiasnet.disqus.com/count.js" async></script>
 {{/post}}
