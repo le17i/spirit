@@ -2,17 +2,17 @@
 
 	{{#foreach posts}}
 
-	<article class="{{post_class}}">
+	<article class="{{post_class}}" itemscope itemtype="http://schema.org/Article">
 
-		<h2 class="post-title">
-			<a href="{{url}}">{{{title}}}</a>
+		<h2 class="post-title" itemprop="headline">
+			<a href="{{url}}" itemprop="name">{{{title}}}</a>
 		</h2>
 
 		<div class="post-meta">
-			{{author}} {{tags prefix=" on " separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+			<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMMM YYYY"}}</time> by <span itemprop="publisher">{{author}}</span> {{tags prefix=" on " separator=", "}}
 		</div>
 
-		<p class="post-excerpt">{{excerpt}}</p>
+		<p class="post-excerpt" itemprop="description">{{excerpt}}</p>
 	</article>
 
 	{{/foreach}}

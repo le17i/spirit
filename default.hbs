@@ -19,10 +19,15 @@
     {{{body}}}
 
     <footer class="page-footer">
-      <div class="page-footer-brand">
-        <a href="{{@blog.url}}" class="page-footer-logo">
+      <div class="page-footer-brand" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <a href="{{@blog.url}}" class="page-footer-logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
           <img src="{{@blog.logo}}" alt="{{@blog.title}}" role="logo" />
+          <meta itemprop="url" content="{{@blog.logo}}">
+          <meta itemprop="width" content="320">
+          <meta itemprop="height" content="160">
         </a>
+        <meta itemprop="name" content="{{@blog.title}}">
+        <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
       </div>
 
       <section class="copyright">
