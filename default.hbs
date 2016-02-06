@@ -15,21 +15,22 @@
     {{ghost_head}}
   </head>
   <body class="page {{body_class}}">
-    <header class="page-header">
-      <a href="{{@blog.url}}" class="page-header-logo">
-        <img class="page-header-brand" src="{{@blog.logo}}" alt="{{@blog.title}}" role="logo" />
-      </a>
-    </header>
 
     {{{body}}}
 
     <footer class="page-footer">
+      <div class="page-footer-brand">
+        <a href="{{@blog.url}}" class="page-footer-logo">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}" role="logo" />
+        </a>
+      </div>
+
       <section class="copyright">
         <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
       </section>
     </footer>
 
     {{ghost_foot}}
-    
+
   </body>
 </html>

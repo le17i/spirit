@@ -1,15 +1,6 @@
 .page {
-  &-header {
-    padding: 16px 0;
-    text-align: center;
-
-    &-brand {
-      max-height: 256px;
-    }
-  }
 
   &-container {
-
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 720px;
@@ -23,8 +14,19 @@
   }
 
   &-footer {
+    background: #333;
+    color: #FFF;
     font-size: 0.85rem;
     padding: 3rem 0;
     text-align: center;
+
+    &-brand {
+      padding: 24px 0;
+      text-align: center;
+
+      img {
+        max-height: 224px;
+      }
+    }
   }
 }
