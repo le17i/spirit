@@ -18,6 +18,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    manifest: {
+      generate: {
+        options: {
+          basePath: '/',
+          cache: ['/assets/css/screen.css', '/content/images/2016/02/leandro-dias-frontend-developer-2.svg', '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg'],
+          network: ['http://*', 'https://*'],
+          preferOnline: true,
+          headcomment: " <%= pkg.name %> v<%= pkg.version %>",
+          verbose: true,
+          timestamp: true,
+          hash: true,
+          process: function(path) {
+            return path.substring('/assets/'.length);
+          }
+        },
+        src: [
+          'assets/css/*.css'
+        ],
+        dest: 'assets/cache/manifest.appcache'
+      }
+    },
     uglify: {
       dist: {
         options: {
@@ -27,25 +48,14 @@ module.exports = function(grunt) {
           'assets/js/index.js': 'src/js/index.js'
         }
       }
-    },
-    watch: {
-      less:{
-        files: ['src/less/**/*.less'],
-        tasks: ['less']
-      },
-      uglify: {
-        files: ['src/js/**/*.js'],
-        tasks: ['uglify']
-      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-manifest');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'uglify', 'watch']);
-  grunt.registerTask('build', ['less', 'uglify']);
+  grunt.registerTask('default', ['less', 'uglify', 'manifest']);
 
 };
