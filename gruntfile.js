@@ -22,9 +22,12 @@ module.exports = function(grunt) {
       generate: {
         options: {
           basePath: '/',
-          cache: ['/assets/css/screen.css', '/content/images/2016/02/leandro-dias-frontend-developer-2.svg', '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg'],
-          network: ['http://*', 'https://*'],
-          preferOnline: true,
+          cache: [
+            '/assets/css/screen.css',
+            '/content/images/2016/02/leandro-dias-frontend-developer-2.svg',
+            '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg',
+            'https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px'
+          ],
           headcomment: " <%= pkg.name %> v<%= pkg.version %>",
           verbose: true,
           timestamp: true,
