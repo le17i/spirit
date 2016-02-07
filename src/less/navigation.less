@@ -16,9 +16,11 @@
 }
 
 .navigation {
-  background-color: #FFF;
+  background-color: #333;
+  box-sizing: border-box;
   height: 100vh;
   transform: translateX(-256px);
+  padding: 1em;
   position: fixed;
   transition: all 0.25s ease;
   top: 0;
@@ -26,10 +28,12 @@
   z-index: 3;
 
   &-header {
+    color: #EEE;
     display: flex;
     justify-content: space-between;
     font-size: 0.75em;
-    padding: 0.5em 1em;
+    margin-bottom: 2em;
+    padding: 1em 0;
   }
 
   &-list {
@@ -42,7 +46,12 @@
         border-bottom: 1px solid #DDD;
         display: block;
         font-size: 1.2em;
-        padding: 0.5em 1em;
+        padding: 0.5em 0;
+
+        &:hover {
+          background-color: #0096ba;
+          color: #EEE;
+        }
 
         &:last-of-type {
           border: none;
