@@ -1,14 +1,16 @@
-<label for="navigation-trigger" class="navigation-trigger"><i class="menu"></i></label>
-<input type="checkbox" id="navigation-trigger">
+{{#if @blog.navigation}}
+  <label for="navigation-trigger" class="navigation-trigger"><i class="menu"></i></label>
 
-<nav class="navigation" role="navigation">
-  <ul class="navigation-list">
+  <input type="checkbox" id="navigation-trigger">
+  <nav class="navigation" role="navigation">
+    <ul class="navigation-list">
 
-    {{#foreach navigation}}
-      <li class="navigation-list-item navigation-list-item-{{slug}}{{#if current}} navigation-list-item__current{{/if}}">
-        <a class="navigation-list-item--link" href="{{url absolute="true"}}">{{label}}</a>
-      </li>
-    {{/foreach}}
+      {{#foreach navigation}}
+        <li class="navigation-list-item navigation-list-item-{{slug}}{{#if current}} navigation-list-item__current{{/if}}">
+          <a class="navigation-list-item--link" href="{{url absolute="true"}}">{{label}}</a>
+        </li>
+      {{/foreach}}
 
-  </ul>
-</nav>
+    </ul>
+  </nav>
+{{/if}}

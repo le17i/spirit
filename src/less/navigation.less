@@ -11,10 +11,15 @@
   display: none;
 }
 
+#navigation-trigger:checked ~ .navigation {
+  transform: translateX(0);
+}
+
 .navigation {
   height: 100vh;
   left: -256px;
   position: fixed;
+  transition: all 0.25s ease;
   top: 0;
   width: 240px;
   z-index: 3;
