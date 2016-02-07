@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="{{asset "cache/manifest.appcache"}}">
   <head>
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True" />
@@ -7,10 +7,6 @@
 
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
-
-    {{! Assets }}
-    <!--<link rel="stylesheet" type="text/css" href="" />
-    <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px' rel='stylesheet' type='text/css'>-->
 
     {{ghost_head}}
   </head>
