@@ -1,0 +1,35 @@
+.navigation-trigger {
+  cursor: pointer;
+  left: 1em;
+  font-size: 32px;
+  position: fixed;
+  top: 1em;
+  z-index: 2;
+}
+
+#navigation-trigger {
+  display: none;
+}
+
+.navigation {
+  height: 100vh;
+  left: -256px;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 3;
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      &--link {
+        display: block;
+        font-size: 1.5em;
+        padding: 1em;
+      }
+    }
+  }
+}
