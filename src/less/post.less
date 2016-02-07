@@ -1,5 +1,37 @@
 .post {
 
+  &-share {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+    &-link {
+    	align-items: center;
+    	border-radius: 50%;
+    	display: flex;
+    	height: 24px;
+      justify-content: center;
+      margin: 0 8px;
+    	width: 24px;
+    }
+
+    &-google-plus:hover {
+    	background-color: #e2131e;
+    }
+
+    &-facebook:hover {
+    	background-color: #777;
+    }
+
+    &-twitter {
+    	background-color: #32aadc;
+    }
+
+    &-linkedin:hover {
+    	background-color: #007bb5;
+    }
+  }
+
   &-author, &-comments {
     border-top: 1px solid #DDD;
     padding: 2rem 0;

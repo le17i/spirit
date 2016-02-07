@@ -26,7 +26,8 @@ module.exports = function(grunt) {
             '/assets/css/screen.css',
             '/content/images/2016/02/leandro-dias-frontend-developer-2.svg',
             '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg',
-            'https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px'
+            'https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px',
+            '/assets/fonts/*'
           ],
           headcomment: " <%= pkg.name %> v<%= pkg.version %>",
           verbose: true,
