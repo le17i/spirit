@@ -16,13 +16,21 @@
 }
 
 .navigation {
+  background-color: #FFF;
   height: 100vh;
-  left: -256px;
+  transform: translateX(-256px);
   position: fixed;
   transition: all 0.25s ease;
   top: 0;
   width: 240px;
   z-index: 3;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+  }
 
   &-list {
     list-style: none;
@@ -31,9 +39,14 @@
 
     &-item {
       &--link {
+        border-bottom: 1px solid #DDD;
         display: block;
-        font-size: 1.5em;
-        padding: 1em;
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+
+        &:last-of-type {
+          border: none;
+        }
       }
     }
   }
