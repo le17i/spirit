@@ -18,19 +18,19 @@
   </article>
 
   <aside class="post-share">
-    <a class="post-share-link post-share-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}" role="share" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+    <a class="post-share-link post-share-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}" role="share" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); ga('send', 'social', 'Google Plus', 'Compartilhar', {{url absolute="true"}});return false;">
       <i class="icon-google-plus"></i>
     </a>
 
-    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" role="share" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" role="share" onclick="window.open(this.href, 'facebook-share','width=580,height=296'); ga('send', 'social', 'Facebook', 'Compartilhar', {{url absolute="true"}});return false;">
       <i class="icon-facebook"></i>
     </a>
 
-    <a class="post-share-link post-share-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}&via=le17i&hashtags=dev" role="share" onclick="window.open(this.href, 'twitter-share', 'width=550,height=500');return false;">
+    <a class="post-share-link post-share-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}&via=le17i&hashtags=dev" role="share" onclick="window.open(this.href, 'twitter-share', 'width=550,height=500'); ga('send', 'social', 'Twitter', 'Tweet', {{url absolute="true"}});return false;">
       <i class="icon-twitter"></i>
     </a>
 
-    <a class="post-share-link post-share-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{title}}&source={{@blog.title}}" role="share" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;">
+    <a class="post-share-link post-share-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{title}}&source={{@blog.title}}" role="share" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530'); ga('send', 'social', 'LinkedIn', 'Compartilhar', {{url absolute="true"}});return false;">
       <i class="icon-linkedin2"></i>
     </a>
   </aside>
