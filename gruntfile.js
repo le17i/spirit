@@ -13,9 +13,14 @@ module.exports = function(grunt) {
             new (require('less-plugin-clean-css'))()
           ]
         },
-        files: {
-          "assets/css/screen.css": "src/less/screen.less"
-        }
+        files: [{
+          //"assets/css/screen.css": "src/less/screen.less"
+          expand: true,
+          cwd: 'src/less',
+          src: ['*.less', '!screen.less'],
+          dest: 'assets/css/',
+          ext: '.css'
+        }]
       }
     },
     manifest: {
@@ -23,7 +28,15 @@ module.exports = function(grunt) {
         options: {
           basePath: '/',
           cache: [
-            '/assets/css/screen.css',
+            //'/assets/css/screen.css',
+            '/assets/css/author.css',
+            '/assets/css/common.css',
+            '/assets/css/icons.css',
+            '/assets/css/index.css',
+            '/assets/css/navigation.css',
+            '/assets/css/page.css',
+            '/assets/css/pagination.css',
+            '/assets/css/post.css',
             '/content/images/2016/02/leandro-dias-frontend-developer-2.svg',
             '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg',
             'https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px',

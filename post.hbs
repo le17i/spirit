@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-
+<link href="/assets/css/post.css" rel="stylesheet" />
 <main class="page-container post {{post_class}}" role="main" itemscope itemtype="http://schema.org/Article">
   <header class="page-container__header center" itemprop="headline">
     <h1 class="page-container__header--title" itemprop="name">{{title}}</h1>
@@ -17,6 +17,7 @@
     {{content}}
   </article>
 
+  <link href="/assets/css/icons.css" rel="stylesheet" />
   <aside class="post-share">
     <a class="post-share-link post-share-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}" role="share" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); ga('send', 'social', 'Google Plus', 'Compartilhar', '{{url absolute="true"}}');return false;">
       <i class="icon-google-plus"></i>
