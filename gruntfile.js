@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             'assets/css/author.css',
             '/content/images/2016/02/leandro-dias-frontend-developer-2.svg',
             '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg',
-            'https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:400,700,300',
+            'https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:700,300',
             '/assets/fonts/icons/icomoon.eot',
             '/assets/fonts/icons/icomoon.svg',
             '/assets/fonts/icons/icomoon.ttf',
