@@ -14,7 +14,11 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          'assets/css/screen.css': 'src/less/screen.less'
+          'assets/css/main.css': 'src/less/main.less',
+          'assets/css/mobile.css': 'src/less/mobile.less',
+          'assets/css/index.css': 'src/less/index.less',
+          'assets/css/post.css': 'src/less/post.less',
+          'assets/css/author.css': 'src/less/author.less'
         }
       }
     },
@@ -23,10 +27,14 @@ module.exports = function(grunt) {
         options: {
           basePath: '/',
           cache: [
-            '/assets/css/screen.css',
+            'assets/css/main.css',
+            'assets/css/mobile.css',
+            'assets/css/index.css',
+            'assets/css/post.css',
+            'assets/css/author.css',
             '/content/images/2016/02/leandro-dias-frontend-developer-2.svg',
             '/content/images/2016/02/leandro-dias-frontend-developer-1.jpg',
-            'https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px',
+            'https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:400,700,300',
             '/assets/fonts/icons/icomoon.eot',
             '/assets/fonts/icons/icomoon.svg',
             '/assets/fonts/icons/icomoon.ttf',
