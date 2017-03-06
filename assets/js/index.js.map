@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/js/index.js"],"names":["window","document","undefined","addEventListener","querySelectorAll","setAttribute"],"mappings":"CAAE,SAASA,EAAQC,EAAUC,GAC3B,YAEAF,GAAOG,iBAAiB,OAAQ,WAC9BF,EAASG,iBAAiB,UAAU,GAAGC,aAAa,QAAS,wBAC5D,IACHL,OAAQC","file":"index.js"}

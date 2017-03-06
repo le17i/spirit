@@ -1,11 +1,11 @@
 {
-  "name": "Spirit",
+  "name": "spirit",
   "version": "1.0.0",
   "description": "Spirit ghost theme.",
   "author": "Leandro Dias <me@leandrodias.net>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/le17i/spirit.git"
+    "url": "git+https://github.com/le17i/spirit.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -15,5 +15,16 @@
     "grunt-manifest": "^0.4.4",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/le17i/spirit/issues"
+  },
+  "homepage": "https://github.com/le17i/spirit#readme",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ghost"
+  ]
 }
