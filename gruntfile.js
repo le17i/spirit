@@ -1,74 +1,80 @@
 module.exports = function(grunt) {
+  var pkg = grunt.file.readJSON('package.json');
 
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    less: {
+    pkg,
+    sass: {
       dist: {
-        options: {
-          compress: true,
-          paths: ["assets/css"],
-          plugins: [
-            new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
-            new (require('less-plugin-clean-css'))()
-          ]
+        options:{
+          loadPath: ['node_modules'],
+          style: 'compressed'
         },
         files: {
-          'assets/css/main.css': 'src/less/main.less',
-          'assets/css/mobile.css': 'src/less/mobile.less',
-          'assets/css/index.css': 'src/less/index.less',
-          'assets/css/post.css': 'src/less/post.less',
-          'assets/css/author.css': 'src/less/author.less'
+          'dist/author.css':  'src/theme/author.scss',
+          'dist/icons.css':   'src/theme/icons.scss',
+          'dist/index.css':   'src/theme/index.scss',
+          'dist/main.css':    'src/theme/main.scss',
+          'dist/mobile.css':  'src/theme/navigation.scss',
+          'dist/post.css':    'src/theme/post.scss',
         }
       }
     },
-    manifest: {
-      generate: {
-        options: {
-          basePath: '/',
-          cache: [
-            '/assets/css/main.css',
-            '/assets/css/mobile.css',
-            '/assets/css/index.css',
-            '/assets/css/post.css',
-            '/assets/css/author.css',
-            'https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:700,300',
-            '/assets/fonts/icons/icomoon.eot',
-            '/assets/fonts/icons/icomoon.svg',
-            '/assets/fonts/icons/icomoon.ttf',
-            '/assets/fonts/icons/icomoon.woff'
-          ],
-          headcomment: " <%= pkg.name %> v<%= pkg.version %>",
-          verbose: true,
-          timestamp: true,
-          hash: true,
-          process: function(path) {
-            return path.substring('/assets/'.length);
-          }
-        },
-        src: [
-          'assets/css/*.css'
-        ],
-        dest: 'assets/cache/manifest.appcache'
+    copy: {
+      fonts: {
+        expand: true,
+        cwd: 'node_modules/@fontsource',
+        src: ['**', '!**/scss/**', '!**/*.json', '!**/*.md'],
+        dest: 'dist/@fontsource/'
+      },
+      iconfonts: {
+        expand: true,
+        cwd: 'src/theme/fonts',
+        src: ['**', '!**/less/**', '!**/css/**', '!bower.json'],
+        dest: 'dist/fonts'
+      },
+
+    },
+    autoprefixer: {
+      dist:{
+        files: {
+          'dist/author.css': 'dist/author.css',
+          'dist/icons.css' : 'dist/icons.css',
+          'dist/index.css' : 'dist/index.css',
+          'dist/main.css': 'dist/main.css',
+          'dist/mobile.css': 'dist/mobile.css',
+          'dist/post.css': 'dist/post.css',
+        }
       }
     },
     uglify: {
       dist: {
-        options: {
-          sourceMap: true
-        },
         files: {
-          'assets/js/index.js': 'src/js/index.js'
+          'dist/index.js': 'src/js/index.js'
         }
       }
-    }
+    },
+    compress: {
+      main: {
+        options: {
+          archive: `spirit-theme${pkg.version}.zip`,
+        },
+        files: [
+          { src: ['package.json'] },
+          { src: ['dist/**'], expand: true },
+          { src: ['./**/*.hbs'] }
+        ],
+      }
+    },
   });
 
-  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-manifest');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'uglify', 'manifest']);
+  grunt.registerTask('default', ['sass', 'copy', 'autoprefixer', 'uglify', 'compress']);
 
 };

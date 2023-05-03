@@ -1,0 +1,108 @@
+// @import "~@fontsource/fira-code/400.css";
+// @import "~@fontsource/oswald/700.css";
+// @import "~@fontsource/roboto-slab/400.css";
+// @import "~@fontsource/roboto-slab/700.css";
+
+@use "@fontsource/fira-code/scss/mixins" as FiraCode;
+@use "@fontsource/oswald/scss/mixins" as Oswald;
+@use "@fontsource/roboto-slab/scss/mixins" as RobotoSlab;
+
+@include FiraCode.fontFace($weight: 400, $fontDir: "@fontsource/fira-code/files");
+@include Oswald.fontFace($weight: 700, $fontDir: "@fontsource/oswald/files");
+@include RobotoSlab.fontFace($weight: 400, $fontDir: "@fontsource/roboto-slab/files");
+@include RobotoSlab.fontFace($weight: 700, $fontDir: "@fontsource/roboto-slab/files");
+
+html {
+  font-size: var(--body-font-size);
+}
+
+body, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--main-font-family);
+  opacity: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @extend %transitions;
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--link-color-hover);
+  }
+
+  img {
+    border: none;
+  }
+}
+
+blockquote {
+  border-left: 3px var(--border-color) solid;
+  font-style: italic;
+  margin: 3em 0;
+  padding: 0.1em 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0 0 36px;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--gran-title-size);
+}
+
+h2 {
+  font-size: var(--title-size);
+}
+
+h3 {
+  font-size: var(--subtitle-size);
+}
+
+h4 {
+  font-size: var(--article-title-size);
+}
+
+h5 {
+  font-size: var(--article-subtitle-size);
+}
+
+h6 {
+  font-size: var(--large-text-size);
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: var(--text-size);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 1.5em;
+}
+
+ul {
+  font-size: 1.2em;
+  line-height: 1.58;
+}
+
+.center {
+  text-align: center;
+}

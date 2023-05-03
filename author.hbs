@@ -1,10 +1,10 @@
 {{!< default}}
-<link href="/assets/css/author.css" rel="stylesheet" media="none" onload="media='all'" />
+<link href="/dist/author.css" rel="stylesheet" media="none" onload="media='all'" />
 <header class="page-container page-container__header author-header" itemtype="http://schema.org/Person">
-  {{#author}}
-    {{#if image}}
+  {{#primary_author}}
+    {{#if img_url}}
       <figure class="author-avatar">
-        <img src="{{image}}" alt="{{name}}" itemprop="image" />
+        <img src="{{img_url}}" alt="{{name}}" itemprop="image" />
       </figure>
     {{/if}}
 
@@ -17,7 +17,7 @@
         </p>
       {{/if}}
     </div>
-  {{/author}}
+  {{/primary_author}}
 </header>
 
 <main class="page-container" role="main">

@@ -1,0 +1,48 @@
+$code-font-family: 'Fira Code';
+$header-font-family: 'Oswald', sans-serif;
+$main-font-family: 'Roboto Slab', serif;
+
+$border-color: #333;
+$link-color: #0096ba;
+$link-color-hover: #00728f;
+$text-color: #454545;
+
+// Font-size desktop
+$smallest-text-size: 0.8rem;
+$small-text-size: 1rem;
+$text-size: 1.3rem;
+$large-text-size: 1.6rem;
+$article-subtitle-size: 1.8rem;
+$article-title-size: 2rem;
+$subtitle-size: 2.2rem;
+$title-size: 2.4rem;
+$gran-title-size: 2.6rem;
+
+:root {
+  --code-font-family: #{$code-font-family};
+  --header-font-family: #{$header-font-family};
+  --main-font-family: #{$main-font-family};
+
+  --border-color: #{$border-color};
+  --link-color: #{$link-color};
+  --link-color-hover: #{$link-color-hover};
+  --text-color: #{$text-color};
+
+  --smallest-text-size: #{$smallest-text-size};
+  --small-text-size: #{$small-text-size};
+  --text-size: #{$text-size};
+  --large-text-size: #{$large-text-size};
+  --article-subtitle-size: #{$article-subtitle-size};
+  --article-title-size: #{$article-title-size};
+  --subtitle-size: #{$subtitle-size};
+  --title-size: #{$title-size};
+  --gran-title-size: #{$gran-title-size};
+
+  @media screen and (max-width: 425px) {
+    --body-font-size: 14px;
+  }
+
+  @media screen and (min-width: 426px) {
+    --body-font-size: 16px;
+  }
+}

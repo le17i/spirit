@@ -9,23 +9,23 @@
 		</h2>
 
 		<div class="post-meta">
-			<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date published_at timeago="true"}}</time> by <span>{{author}}</span> {{tags prefix=" on " separator=", "}}
+			<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date published_at timeago="true"}}</time> by <span></span> {{tags prefix=" on " separator=", "}}
 			<meta itemprop="dateModified" content="{{date updated_at format='YYYY-MM-DD'}}">
-      <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
-      <meta itemprop="image" content="{{@blog.logo}}">
+      <meta itemprop="mainEntityOfPage" content="{{@site.url}}">
+      <meta itemprop="image" content="{{@site.logo}}">
 		</div>
 
 		<p class="post-excerpt" itemprop="description">{{excerpt}}</p>
 
 		<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
       <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="{{@blog.logo}}">
+        <meta itemprop="url" content="{{@site.logo}}">
         <meta itemprop="width" content="320">
         <meta itemprop="height" content="160">
       </a>
-      <meta itemprop="name" content="{{@blog.title}}">
-      <meta itemprop="url" content="{{@blog.url}}">
-      <meta itemprop="mainEntityOfPage" content="{{@blog.url}}">
+      <meta itemprop="name" content="{{@site.title}}">
+      <meta itemprop="url" content="{{@site.url}}">
+      <meta itemprop="mainEntityOfPage" content="{{@site.url}}">
     </div>
 
 		<div itemprop="author" itemscope itemtype="https://schema.org/Person">
