@@ -35,5 +35,15 @@
     "@fontsource/fira-code": "^4.5.13",
     "@fontsource/oswald": "^4.5.12",
     "@fontsource/roboto-slab": "^4.5.11"
+  },
+  "config": {
+    "custom": {
+      "disqus": {
+        "type": "text"
+      },
+      "google_analytics": {
+        "type": "text"
+      }
+    }
   }
 }

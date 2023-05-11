@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {{#if @custom.google_analytics}}
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{{@custom.google_analytics}}}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+
+        gtag("config", "{{{@custom.google_analytics}}}");
+      </script>
+    {{/if}}
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{{meta_title}}</title>
-    <!--<link href='https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:700,400' rel='stylesheet' type='text/css'>-->
-    <link href="/dist/main.css" rel="stylesheet" media="none" onload="media='all'" />
-    <link href="/dist/icons.css" rel="stylesheet" media="none" onload="media='all'" />
-
+    {{{block "metaTags"}}}
+    <link href="/dist/main.css" rel="stylesheet"/>
+    <link href="/dist/icons.css" rel="stylesheet"/>
+    {{#if @site.navigation}}
+      <link href="/dist/navigation.css" rel="stylesheet"/>
+    {{/if}}
+    {{{block "styles"}}}
     {{ghost_head}}
   </head>
   <body class="page {{body_class}}">
@@ -18,10 +32,10 @@
     <footer class="page-footer">
       <div class="page-footer-brand" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <a href="{{@site.url}}" class="page-footer-logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-          <img src="{{@site.logo}}" alt="{{@site.title}}" role="logo" />
+          <img src="{{@site.logo}}" alt="{{@site.title}}" role="logo" width="128px" />
           <meta itemprop="url" content="{{@site.logo}}">
-          <meta itemprop="width" content="320">
-          <meta itemprop="height" content="160">
+          <meta itemprop="width" content="128">
+          <meta itemprop="height" content="128">
         </a>
         <meta itemprop="name" content="{{@site.title}}">
         <meta itemprop="url" content="{{@site.url}}">
@@ -34,9 +48,6 @@
     </footer>
 
     {{navigation}}
-
     {{ghost_foot}}
-
-    <link href="/dist/mobile.css" rel="stylesheet" media="(max-width: 800px)" />
   </body>
 </html>

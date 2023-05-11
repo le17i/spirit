@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           'dist/icons.css':   'src/theme/icons.scss',
           'dist/index.css':   'src/theme/index.scss',
           'dist/main.css':    'src/theme/main.scss',
-          'dist/mobile.css':  'src/theme/navigation.scss',
+          'dist/navigation.css':  'src/theme/navigation.scss',
           'dist/post.css':    'src/theme/post.scss',
         }
       }
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           'dist/icons.css' : 'dist/icons.css',
           'dist/index.css' : 'dist/index.css',
           'dist/main.css': 'dist/main.css',
-          'dist/mobile.css': 'dist/mobile.css',
+          'dist/navigation.css': 'dist/navigation.css',
           'dist/post.css': 'dist/post.css',
         }
       }

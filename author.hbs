@@ -1,5 +1,7 @@
 {{!< default}}
-<link href="/dist/author.css" rel="stylesheet" media="none" onload="media='all'" />
+{{#contentFor "styles"}}
+  <link href="/dist/author.css" rel="stylesheet"/>
+{{/contentFor}}
 <header class="page-container page-container__header author-header" itemtype="http://schema.org/Person">
   {{#primary_author}}
     {{#if img_url}}

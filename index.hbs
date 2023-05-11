@@ -1,7 +1,15 @@
 {{!< default}}
-<link href="/dist/index.css" rel="stylesheet" media="none" onload="media='all'" />
+{{#contentFor "metaTags"}}
+    <meta name="description" content="{{meta_description}}">
+  {{/contentFor}}
+{{#contentFor "styles"}}
+  <link href="/dist/index.css" rel="stylesheet"/>
+{{/contentFor}}
 <header class="index-header">
-  <img src="{{@site.logo}}" alt="{{@site.title}}" role="logo" />
+  <picture>
+    <source srcset="{{img_url @site.logo format="webp"}}" type="image/webp" />
+    <img src="{{@site.logo}}" alt="{{@site.title}}" width="128px" role="logo" />
+  </picture>
   <h1 class="index-header-title">{{@site.title}}</h1>
 </header>
 
